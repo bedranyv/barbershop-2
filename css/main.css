@@ -1919,9 +1919,11 @@
   .form-write__input::placeholder {
     color: #000000; }
   .form-write__input:hover, .form-write__input:focus {
-    border-color: #d5c9bd; }
+    border-color: #9d948b;
+    outline: none; }
   .form-write__input:active {
-    border-color: #999999; }
+    border-color: #999999;
+    outline: none; }
 
 .form-write__input--text {
   padding-top: 12px;
@@ -2116,6 +2118,14 @@
   padding-top: 0px;
   color: #ffffff;
   background-color: #826550; }
+  .form-write__button-submit:hover, .form-write__button-submit:focus {
+    background-color: #6a4d38; }
+  .form-write__button-submit:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #6a4d38; }
+  .form-write__button-submit:disabled {
+    background-color: #aeaeae;
+    cursor: auto; }
 
 @media (min-width: 768px) {
   .form-write {
