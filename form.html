@@ -7,7 +7,7 @@
 		<link href="css/normalize.css" type="text/css" rel="stylesheet">
 		<link href="css/main.css" type="text/css" rel="stylesheet">
 	</head>
-	<body>
+	<body class="body__no-main-page">
 		<header class="page-header">
 			<div class="page-header__container">
 				<a class="page-header__logo">
@@ -22,14 +22,14 @@
 					<button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 					<div class="main-nav__wrapper">
 						<ul class="main-nav__list site-list">
-							<li class="site-list__item site-list__item--current">
-								<a>Главная</a>
+							<li class="site-list__item">
+								<a href="index.html">Главная</a>
 							</li>
 							<li class="site-list__item">
 								<a href="photo.html">Наши работы</a>
 							</li>
-							<li class="site-list__item">
-								<a href="form.html">Записаться</a>
+							<li class="site-list__item site-list__item--current">
+								<a>Записаться</a>
 							</li>
 							<li class="site-list__item">
 								<a href="#">Контакты</a>
@@ -50,98 +50,106 @@
 				</nav>
 			</div>
 		</header>
-		<main class="page-photo">
-			<div class="page-photo__title--wrapper">
-				<h1 class="page-photo__title">Наши работы</h1>
-				<a class="button page-photo__to-main-link" href="index.html">На главную</a>
+		<main class="main-other">
+			<div class="main-other__title">
+				<div class="main-other__title--wrapper">
+					<h1 class="main-other__title--text">Запись на стрижку</h1>
+					<a class="button__bg-light main-other__to-main-link" href="index.html">На главную</a>
+				</div>
 			</div>
-			<form class="page-photo__form-write form-write" action="https://echo.htmlacademy.ru" method="post">
-				<fieldset class="form-write__fieldset form-write__fieldset--client-name">
-					<p>
-			  		<label class="visually-hidden" for="client-name">Имя</label>
-			  		<input class="form-write__input form-write__input--name" id="client-name" type="text" name="client-name" placeholder="Имя">
-			  	</p>
-			  	<p>
-			  		<label class="visually-hidden" for="client-surname">Фамилия</label>
-			  		<input class="form-write__input form-write__input--surname" id="client-surname" type="text" name="client-surname" placeholder="Фамилия">
-			  	</p>
-			  	<p>
-			  		<label class="visually-hidden" for="client-patronymic">Отчество</label>
-			  		<input class="form-write__input form-write__input--patronymic" id="client-patronymic" type="text" name="client-patronymic" placeholder="Отчество">
-			  	</p>
-			  </fieldset>
-			  <fieldset class="form-write__fieldset form-write__fieldset--client-contacts">
-			  	<p>
-			  		<label class="visually-hidden" for="client-tel">Контактный телефон</label>
-			  		<input class="form-write__input form-write__input--tel" id="client-tel" type="tel" name="client-tel" placeholder="Контактный телефон">
-			  	</p>
-			  	<p>
-			  		<label class="visually-hidden" for="client-email">Контактный e-mail</label>
-			  		<input class="form-write__input form-write__input--email" id="client-email" type="email" name="client-email" placeholder="Контактный e-mail">
-			  	</p>
-			  </fieldset>
-			  <fieldset class="form-write__fieldset form-write__fieldset--client-text">
-			  	<p>
-			  		<label class="visually-hidden" for="client-text">Доп. информация для мастера</label>
-			  		<textarea class="form-write__input form-write__input--text" id="client-text" name="client-text" placeholder="Доп. информация для мастера"></textarea>
-			  	</p>
-			  </fieldset>
-		  	<fieldset class="form-write__fieldset form-write__fieldset--beard">
-		  		<legend class="form-write__fieldset-legend">Выберите модель бороды</legend>
-		  		<ul class="form-write__beard-list">
-		  			<li class="form-write__beard-item">
-		  				<input class="form-write__beard-input form-write__beard-input--admiral" id="beard-admiral" type="radio" name="beard" value="admiral" checked>
-		  				<label class="form-write__beard-label form-write__beard-label--admiral" for="beard-admiral">адмирал</label>
-		  			</li>
-		  			<li class="form-write__beard-item">
-		  				<input class="form-write__beard-input form-write__beard-input--lumberjack" id="beard-lumberjack" type="radio" name="beard" value="lumberjack">
-		  				<label class="form-write__beard-label form-write__beard-label--lumberjack" for="beard-lumberjack">лесоруб</label>
-		  			</li>
-		  			<li class="form-write__beard-item">
-		  				<input class="form-write__beard-input form-write__beard-input--polar" id="beard-polar" type="radio" name="beard" value="polar">
-		  				<label class="form-write__beard-label form-write__beard-label--polar" for="beard-polar">полярник</label>
-		  			</li>
-		  			<li class="form-write__beard-item">
-		  				<input class="form-write__beard-input form-write__beard-input--boyar" id="beard-boyar" type="radio" name="beard" value="boyar">
-		  				<label class="form-write__beard-label form-write__beard-label--boyar" for="beard-boyar">боярин</label>
-		  			</li>
-		  			<li class="form-write__beard-item">
-		  				<input class="form-write__beard-input form-write__beard-input--sage" id="beard-sage" type="radio" name="beard" value="sage">
-		  				<label class="form-write__beard-label form-write__beard-label--sage" for="beard-sage">мудрец</label>
-		  			</li>
-		  		</ul>
-		  	</fieldset>
-		  	<fieldset class="form-write__fieldset form-write__fieldset--services">
-		  		<legend class="form-write__fieldset-legend">Дополнительные услуги:</legend>
-		  		<ul class="form-write__services-list">
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="beard-paint" type="checkbox" name="beard-paint" checked>
-		  				<label class="form-write__services-label" for="beard-paint">Подкрасить бороду</label>
-		  			</li>
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="wind-mustache" type="checkbox" name="wind-mustache" checked>
-		  				<label class="form-write__services-label" for="wind-mustache">Накрутить усы</label>
-		  			</li>
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="beard-comb" type="checkbox" name="beard-comb">
-		  				<label class="form-write__services-label" for="beard-comb">Причесать бороду</label>
-		  			</li>
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="temple-trim" type="checkbox" name="temple-trim">
-		  				<label class="form-write__services-label" for="temple-trim">Подровнять виски</label>
-		  			</li>
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="remove-gray-hair" type="checkbox" name="remove-gray-hair">
-		  				<label class="form-write__services-label" for="remove-gray-hair">Убрать седину</label>
-		  			</li>
-		  			<li class="form-write__services-item">
-		  				<input class="form-write__services-input" id="polish-bald-head" type="checkbox" name="polish-bald-head">
-		  				<label class="form-write__services-label" for="polish-bald-head">Отполировать лысину</label>
-		  			</li>
-		  		</ul>
-		  		<button type="submit" class="button form-write__button-submit">Отправить заявку</button>
-		  	</fieldset>
-			</form>
+			<div class="form-write__wrapper">
+				<form class="main-other__form-write form-write" action="https://echo.htmlacademy.ru" method="post">
+					<fieldset class="form-write__fieldset form-write__fieldset--client-name">
+						<div class="form-write__fieldset-wrapper">
+							<p>
+					  		<label class="visually-hidden" for="client-name">Имя</label>
+					  		<input class="form-write__input form-write__input--name" id="client-name" type="text" name="client-name" placeholder="Имя">
+				  		</p>
+				  		<p>
+					  		<label class="visually-hidden" for="client-surname">Фамилия</label>
+					  		<input class="form-write__input form-write__input--surname" id="client-surname" type="text" name="client-surname" placeholder="Фамилия">
+				  		</p>
+				  		<p>
+					  		<label class="visually-hidden" for="client-patronymic">Отчество</label>
+					  		<input class="form-write__input form-write__input--patronymic" id="client-patronymic" type="text" name="client-patronymic" placeholder="Отчество">
+				  		</p>
+			  		</div>
+			  	</fieldset>
+				  <fieldset class="form-write__fieldset form-write__fieldset--client-contacts">
+				  	<div class="form-write__fieldset-wrapper">
+					  	<p>
+					  		<label class="visually-hidden" for="client-tel">Контактный телефон</label>
+					  		<input class="form-write__input form-write__input--tel" id="client-tel" type="tel" name="client-tel" placeholder="Контактный телефон">
+					  	</p>
+					  	<p>
+					  		<label class="visually-hidden" for="client-email">Контактный e-mail</label>
+					  		<input class="form-write__input form-write__input--email" id="client-email" type="email" name="client-email" placeholder="Контактный e-mail">
+					  	</p>
+				  	</div>
+				  </fieldset>
+				  <fieldset class="form-write__fieldset form-write__fieldset--client-text">
+				  	<p>
+				  		<label class="visually-hidden" for="client-text">Доп. информация для мастера</label>
+				  		<textarea class="form-write__input form-write__input--text" id="client-text" name="client-text" placeholder="Доп. информация для мастера"></textarea>
+				  	</p>
+				  </fieldset>
+			  	<fieldset class="form-write__fieldset form-write__fieldset--beard">
+			  		<legend class="form-write__fieldset-legend">Выберите модель бороды:</legend>
+			  		<ul class="form-write__beard-list">
+			  			<li class="form-write__beard-item">
+			  				<input class="form-write__beard-input form-write__beard-input--admiral visually-hidden" id="beard-admiral" type="radio" name="beard" value="admiral" checked>
+			  				<label class="form-write__beard-label form-write__beard-label--admiral" for="beard-admiral" tabindex="0"><span>адмирал</span></label>
+			  			</li>
+			  			<li class="form-write__beard-item">
+			  				<input class="form-write__beard-input form-write__beard-input--lumberjack visually-hidden" id="beard-lumberjack" type="radio" name="beard" value="lumberjack">
+			  				<label class="form-write__beard-label form-write__beard-label--lumberjack" for="beard-lumberjack" tabindex="0"><span>лесоруб</span></label>
+			  			</li>
+			  			<li class="form-write__beard-item">
+			  				<input class="form-write__beard-input form-write__beard-input--polar visually-hidden" id="beard-polar" type="radio" name="beard" value="polar">
+			  				<label class="form-write__beard-label form-write__beard-label--polar" for="beard-polar" tabindex="0"><span>полярник</span></label>
+			  			</li>
+			  			<li class="form-write__beard-item">
+			  				<input class="form-write__beard-input form-write__beard-input--boyar visually-hidden" id="beard-boyar" type="radio" name="beard" value="boyar">
+			  				<label class="form-write__beard-label form-write__beard-label--boyar" for="beard-boyar" tabindex="0"><span>боярин</span></label>
+			  			</li>
+			  			<li class="form-write__beard-item">
+			  				<input class="form-write__beard-input form-write__beard-input--sage visually-hidden" id="beard-sage" type="radio" name="beard" value="sage">
+			  				<label class="form-write__beard-label form-write__beard-label--sage" for="beard-sage" tabindex="0"><span>мудрец</span></label>
+			  			</li>
+			  		</ul>
+			  	</fieldset>
+			  	<fieldset class="form-write__fieldset form-write__fieldset--services">
+			  		<legend class="form-write__fieldset-legend">Дополнительные услуги:</legend>
+			  		<ul class="form-write__services-list">
+			  			<li class="form-write__services-item form-write__services-item-1">
+			  				<input class="form-write__services-input visually-hidden" id="beard-paint" type="checkbox" name="beard-paint" checked>
+			  				<label class="form-write__services-label" for="beard-paint">Подкрасить бороду</label>
+			  			</li>
+			  			<li class="form-write__services-item form-write__services-item-2">
+			  				<input class="form-write__services-input visually-hidden" id="wind-mustache" type="checkbox" name="wind-mustache" checked>
+			  				<label class="form-write__services-label" for="wind-mustache">Накрутить усы</label>
+			  			</li>
+			  			<li class="form-write__services-item form-write__services-item-3">
+			  				<input class="form-write__services-input visually-hidden" id="beard-comb" type="checkbox" name="beard-comb">
+			  				<label class="form-write__services-label" for="beard-comb">Причесать бороду</label>
+			  			</li>
+			  			<li class="form-write__services-item form-write__services-item-4">
+			  				<input class="form-write__services-input visually-hidden" id="temple-trim" type="checkbox" name="temple-trim">
+			  				<label class="form-write__services-label" for="temple-trim">Подровнять виски</label>
+			  			</li>
+			  			<li class="form-write__services-item form-write__services-item-5">
+			  				<input class="form-write__services-input visually-hidden" id="remove-gray-hair" type="checkbox" name="remove-gray-hair">
+			  				<label class="form-write__services-label" for="remove-gray-hair">Убрать седину</label>
+			  			</li>
+			  			<li class="form-write__services-item form-write__services-item-6">
+			  				<input class="form-write__services-input visually-hidden" id="polish-bald-head" type="checkbox" name="polish-bald-head">
+			  				<label class="form-write__services-label" for="polish-bald-head">Отполировать лысину</label>
+			  			</li>
+			  		</ul>
+			  		<button type="submit" class="button__bg-light form-write__button-submit">Отправить заявку</button>
+			  	</fieldset>
+				</form>
+			</div>
 		</main>
 		<footer class="page-footer">
 			<div class="page-footer__container">
